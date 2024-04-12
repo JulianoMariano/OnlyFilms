@@ -9,4 +9,16 @@ export const Container = styled.div`
     grid-template-areas: 
     "header"
     "content" /*Com o grid-template-areas nós iremos nomear essas áreas para aplicar o grid-template-rows*/
+`;
+
+export const Links = styled.ul`
+    list-style: none;
+
+    > li {
+        margin-top: 12px;
+        
+        > a {
+            color:  ${({ theme }) => theme.COLORS.WHITE};
+        }
+    }
 `
