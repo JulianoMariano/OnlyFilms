@@ -26,6 +26,10 @@ export function Home() {
         </li>
         <li>
           {" "}
+          <ButtonText title="Frontend"/>{" "}
+        </li>
+        <li>
+          {" "}
           <ButtonText title="React" />{" "}
         </li>
         <li>
@@ -42,10 +46,18 @@ export function Home() {
         <Section title = "Minhas Notas">
             <Note data={
                 {
-                title: 'React', 
+                title: 'React Modal', 
                 tags: [
-                    {id: '1', name: 'react'},
-                    {id: '2', name: 'rocketseat'}
+                    {id: '1', name: 'react'}
+                ]
+            }}
+            />
+            <Note data={
+                {
+                title: 'Exemplo de Middleware', 
+                tags: [
+                    {id: '1', name: 'express'},
+                    {id: '2', name: 'nodejs'}
                 ]
             }}
             />

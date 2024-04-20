@@ -15,7 +15,7 @@ export const Container = styled.button `
     text-align: left;
     font-weight: 700;
     font-size: 24px;
-    color: ${({ theme }) => theme.COLORS.WHITE}
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   >footer {
@@ -23,4 +23,4 @@ export const Container = styled.button `
     display: flex;
     margin-top: 24px;
   }
-`;
+`
