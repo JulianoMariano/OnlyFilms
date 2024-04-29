@@ -11,13 +11,16 @@ export const Container = styled.header `
     border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     padding: 0 80px;
+
+    position: absolute;
 `
 export const Profile = styled.div `
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 
     >img {
         width: 60px;
@@ -28,8 +31,9 @@ export const Profile = styled.div `
     >div {
         display: flex;
         flex-direction: column;
-        margin-left: 16px;
+        margin-right: 16px;
         line-height: 24px;
+        align-items: flex-end;
     }
 
     span {
@@ -45,9 +49,24 @@ export const Profile = styled.div `
 export const Logout = styled.button `
     border: none;
     background: none;
-
-    >svg {
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
-        font-size: 36px;
-    }
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
 `
+export const Search = styled.div `
+    display: flex;
+    width: 50vw;
+    height: fit-content;
+    
+    padding: 30px;
+    margin: 0 auto;
+    
+`
+export const Brand = styled.div `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    >h1 {
+        font-size: 24px;
+        color: ${({ theme }) => theme.COLORS.ORANGE};
+    }
+` 

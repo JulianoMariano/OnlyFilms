@@ -11,39 +11,11 @@ import { ButtonText } from "../../components/ButtonText";
 export function Home() {
   return (
     <Container>
-      <Brand>
-        <h1>NoteScribble</h1>
-      </Brand>
-
       <Header>
-        
       </Header>
 
-      <Menu>
-        <li>
-          {" "}
-          <ButtonText title="Todos" isactive />{" "}
-        </li>
-        <li>
-          {" "}
-          <ButtonText title="Frontend"/>{" "}
-        </li>
-        <li>
-          {" "}
-          <ButtonText title="React" />{" "}
-        </li>
-        <li>
-          {" "}
-          <ButtonText title="Node" />{" "}
-        </li>
-      </Menu>
-
-      <Search>
-        <Input placeholder="Pesquisar pelo titulo" icon={FiSearch} />
-      </Search>
-
       <Content>
-        <Section title = "Minhas Notas">
+        <Section title = "Meus Filmes">
             <Note data={
                 {
                 title: 'React Modal', 
