@@ -14,8 +14,6 @@ export const Container = styled.header `
     justify-content: center;
 
     padding: 0 80px;
-
-    position: absolute;
 `
 export const Profile = styled.div `
     display: flex;
