@@ -6,18 +6,15 @@ export const Container = styled.div `
 `
 
 export const Form = styled.form `
-  max-width: 550px;
+  max-width: 50vw;
   margin: 38px auto;
-
-  display: grid;
-  grid-template-rows: 105px auto;
-  grid-template-areas: 
-  "header"
-  "content"
   
-  > header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: grid;
+  grid-template-rows: 250px 250px;
+  grid-template-rows: 55px 55px 200px;
+  grid-template-areas: 
+  "header header"
+  "content content"
+  "content content"
 `
+

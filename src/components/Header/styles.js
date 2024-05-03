@@ -12,6 +12,7 @@ export const Container = styled.header `
 
     display: flex;
     justify-content: center;
+    align-items: center;
 
     padding: 0 80px;
 `
@@ -53,9 +54,7 @@ export const Search = styled.div `
     display: flex;
     width: 50vw;
     height: fit-content;
-    
-    padding: 30px;
-    margin: 0 auto;
+    align-items: center;
     
 `
 export const Brand = styled.div `

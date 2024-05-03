@@ -9,14 +9,11 @@ export function New() {
       <Header />
       
       <main>
-        <Form>
-
           <header>
             <a href="/">Voltar</a>
             <h1>Novo Filme</h1>
-
           </header>
-
+        <Form>
           <Input placeholder="Título" />
           <Input placeholder="Sua nota (de 0 a 5)" />
 
