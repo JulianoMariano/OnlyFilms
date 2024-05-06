@@ -11,14 +11,11 @@ export const Container = styled.header `
     border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-
-    padding: 0 80px;
 `
 export const Profile = styled.div `
     display: flex;
-    align-items: center;
     flex-direction: row-reverse;
 
     >img {
@@ -51,17 +48,10 @@ export const Logout = styled.button `
     color: ${({ theme }) => theme.COLORS.GRAY_100};
 `
 export const Search = styled.div `
-    display: flex;
     width: 50vw;
-    height: fit-content;
-    align-items: center;
-    
+    height: fit-content;    
 `
 export const Brand = styled.div `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     >h1 {
         font-size: 24px;
         color: ${({ theme }) => theme.COLORS.ORANGE};
