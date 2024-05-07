@@ -18,6 +18,14 @@ export const Container = styled.div`
     background: none;
   }
 
+  .button-delete {
+    color: ${({ theme }) => theme.COLORS.RED}
+  }
+
+  .button-add {
+    color: ${({ theme }) => theme.COLORS.ORANGE}
+  }
+  
   >input {
     height: 56px;
     width: 100%;
@@ -30,7 +38,7 @@ export const Container = styled.div`
     border: none;
 
     &::placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_300}
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
   }
