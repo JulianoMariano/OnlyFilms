@@ -9,6 +9,17 @@ export const Container = styled.div `
   grid-template-areas: 
   "header"
   "content";
+
+  > main {
+    grid-area: content;
+    overflow-y: auto;
+  }
+
+  .inputs, .tags, .buttons {
+    display: flex;
+    gap: 10px;
+  }
+
 `
 
 export const Form = styled.form `
