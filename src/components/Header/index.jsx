@@ -1,15 +1,13 @@
-import { RiShutDownLine } from 'react-icons/ri'
-import { FiSearch } from 'react-icons/fi';
-
 import { Container, Brand, Search, Profile, Logout } from './styles'
-
+import { RiShutDownLine } from 'react-icons/ri'
 import { Input } from '../../components/Input'
-
+import { FiSearch } from 'react-icons/fi';
+import { Link } from 'react-router-dom'
 
 export function Header() {
     return(
         <Container>
-            <Brand>
+            <Brand to="/">
                 <h1>NodeMovies</h1>
             </Brand>
             
@@ -17,7 +15,7 @@ export function Header() {
                 <Input placeholder="Pesquisar pelo titulo" icon={FiSearch} />
             </Search>
             
-            <Profile>
+            <Profile to="/profile">
                 <img
                     src='https://github.com/JulianoMariano.png'
                     alt='Foto do usuário'

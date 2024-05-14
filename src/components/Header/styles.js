@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.header `
@@ -14,7 +15,7 @@ export const Container = styled.header `
     justify-content: space-around;
     align-items: center;
 `
-export const Profile = styled.div `
+export const Profile = styled(Link) `
     display: flex;
     flex-direction: row-reverse;
 
@@ -51,7 +52,7 @@ export const Search = styled.div `
     width: 50vw;
     height: fit-content;    
 `
-export const Brand = styled.div `
+export const Brand = styled(Link) `
     >h1 {
         font-size: 24px;
         color: ${({ theme }) => theme.COLORS.ORANGE};

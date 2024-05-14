@@ -16,9 +16,13 @@ export function Home() {
 
       <Content>
         <Section title = "Meus Filmes">
+            <NewNote link to="/new">
+              <FiPlus />
+                Criar nota
+            </NewNote>
             <Note data={
                 {
-                title: 'React Modal', 
+                  title: 'React Modal', 
                 tags: [
                     {id: '1', name: 'react'}
                 ]
@@ -34,12 +38,9 @@ export function Home() {
             }}
             />
         </Section>
+      
       </Content>
 
-      <NewNote>
-        <FiPlus />
-        Criar nota
-      </NewNote>
     </Container>
   );
 }
