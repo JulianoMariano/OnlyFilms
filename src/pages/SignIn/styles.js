@@ -19,13 +19,15 @@ export const Form = styled.form `
   text-align: center;
 
   >h1 {
-    font-size: 24px;
+    align-self: flex-start;
+    font-size: 40px;
     color: ${({ theme }) => theme.COLORS.ORANGE};
     }
 
   >h2 {
+    align-self: flex-start;
     font-size: 24px;
-    margin: 48px;
+    margin: 48px 0;
   }
 
   p{
@@ -34,7 +36,7 @@ export const Form = styled.form `
   }
 
   >a {
-    margin-top: 124px;
+    margin-top: 50px;
     color: ${({ theme }) => theme.COLORS.ORANGE};
   }
 `

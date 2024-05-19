@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     width: 100%;
@@ -17,18 +18,6 @@ export const Container = styled.div`
     }
 `;
 
-export const Links = styled.ul`
-    list-style: none;
-
-    > li {
-        margin-top: 12px;
-        
-        > a {
-            color:  ${({ theme }) => theme.COLORS.WHITE};
-        }
-    }
-`;
-
 export const Content = styled.div `
     max-width: 550px;
     margin: 0 auto;
@@ -36,8 +25,8 @@ export const Content = styled.div `
     display: flex;
     flex-direction: column;
 
-    > button:first-child{
-        align-self: end;
+    > button:first-child(Link){
+        align-self: start;
     }
 
     > h1 {

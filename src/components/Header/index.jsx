@@ -8,7 +8,7 @@ export function Header() {
     return(
         <Container>
             <Brand to="/">
-                <h1>NodeMovies</h1>
+                <h1>MovieMemento</h1>
             </Brand>
             
             <Search>

@@ -30,8 +30,13 @@ export const Form = styled.form `
     margin-bottom: 36px;
 
     a {
+      display: flex;
+      align-items: center;
       font-size: 20px;
-      color: ${({ theme }) => theme.COLORS.GRAY_100}
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
+
+      gap: 10px;
+      margin-bottom: 10px;
     }
   }
   
