@@ -19,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div `
-    max-width: 550px;
+    max-width: 90%;
     margin: 0 auto;
 
     display: flex;
@@ -27,7 +27,13 @@ export const Content = styled.div `
 
     > button:first-child(Link){
         align-self: start;
+        background-color: red;
+        
+        a, button {
+            background-color: red;
+        }
     }
+
 
     > h1 {
         font-size: 36px;

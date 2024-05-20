@@ -19,27 +19,27 @@ export const Container = styled.div `
     display: flex;
     gap: 10px;
   }
-
 `
 
 export const Form = styled.form `
   max-width: 50vw;
   margin: 38px auto;
 
-   header {
-    margin-bottom: 36px;
+  header {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   margin-bottom:30px;
 
-    a {
+    a, button {
       display: flex;
       align-items: center;
       font-size: 20px;
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
+      color: ${({ theme }) => theme.COLORS.ORANGE};
 
       gap: 10px;
-      margin-bottom: 10px;
     }
   }
-  
   
   >input {
     display: grid;

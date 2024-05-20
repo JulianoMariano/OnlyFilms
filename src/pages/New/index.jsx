@@ -1,7 +1,8 @@
+import { ButtonText } from '../../components/ButtonText'
+import { NoteItem } from  '../../components/NoteItem'
 import { Textarea } from '../../components/Textarea'
-import { NoteItem } from '../../components/NoteItem'
 import { Section } from '../../components/Section'
-import { Header } from '../../components/Header'
+import { Header }  from '../../components/Header'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 import { FiArrowLeft } from 'react-icons/fi'
@@ -18,7 +19,7 @@ export function New() {
           <header>
             <Link to = "/">
               <FiArrowLeft/>
-              Voltar
+              <ButtonText title='Voltar'/>            
             </Link>
             <h1>Novo Filme</h1>
           </header>
@@ -36,10 +37,12 @@ export function New() {
           </Section>
           
           <Section title ="Marcadores">
+            <span>
             <div className="tags">
               <NoteItem value="react"/>
               <NoteItem isNew placeholder="Nova tag"/>
             </div>
+            </span>
           </Section>
           
           <div className="buttons">
