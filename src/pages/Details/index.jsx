@@ -3,7 +3,7 @@ import { Tag } from '../../components/Tag'
 import { Button } from'../../components/Button'
 import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
-import { Container, Content } from './styles'
+import { Container, Content, Profile } from './styles'
 import { ButtonText } from '../../components/ButtonText'
 import { FiArrowLeft, FiStar, FiClock } from 'react-icons/fi'
 
@@ -18,14 +18,25 @@ export function Details() {
               <FiArrowLeft/>
               <ButtonText title='Voltar'/>
             </Link>
-          
             <h1>
               Interestellar
               <FiStar/><FiStar/><FiStar/><FiStar/><FiStar/>
             </h1> 
-          
-            <Tag title="express"/>
-            <Tag title="nodejs"/>
+          <span>
+            <Profile>
+              <img
+                src='https://github.com/JulianoMariano.png'
+                alt='Foto do usuário'
+              />
+              <div>
+                <strong>Juliano Mariano</strong>
+              </div>
+            </Profile>
+
+            <Tag title="Ficção Científica"/>
+            <Tag title="Drama"/>
+            <Tag title="Família"/>
+          </span>
 
           </header>
           <p>

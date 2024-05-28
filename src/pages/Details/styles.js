@@ -24,27 +24,63 @@ export const Content = styled.div `
 
     display: flex;
     flex-direction: column;
+    
+    header {
+        a, button {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: ${({ theme }) => theme.COLORS.ORANGE};
+    
+            gap: 10px;
+        }
 
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+    
     > button:first-child(Link){
         align-self: start;
         background-color: red;
         
-        a, button {
-            background-color: red;
-        }
-    }
-
-
-    > h1 {
-        font-size: 36px;
-        font-weight: 500;
-        padding-top: 64px;
     }
 
     > p {
         font-size: 16px;
         margin-top: 16px;
         text-align: justify;
+        margin-top: 40px;
+    }
+`
+export const Profile = styled.div `
+    display: flex;
+    flex-direction: row-reverse;
+
+    >img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+        line-height: 24px;
+        align-items: flex-end;
+    }
+
+    span {
+        font-size: 14px;
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
+    }
+
+    strong {
+        font-size: 18px;
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 `
 
