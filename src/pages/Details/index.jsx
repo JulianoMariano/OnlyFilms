@@ -37,10 +37,10 @@ export function Details() {
               </div>
             </Profile>
 
+          </span>
             <Tag title="Ficção Científica"/>
             <Tag title="Drama"/>
             <Tag title="Família"/>
-          </span>
 
           </header>
           <p>

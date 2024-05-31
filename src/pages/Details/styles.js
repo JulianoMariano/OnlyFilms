@@ -16,8 +16,7 @@ export const Container = styled.div`
         overflow-y: auto; /*- Quando falamos do eixo Y estamos nos referindo ao eixo vertical e o scroll é o método de limitação, se o conteúdo não couber mais na vertical, ele vai habilitar uma barra de rolagem automaticamente*/
         padding: 64px 0;
     }
-`;
-
+`
 export const Content = styled.div `
     max-width: 90%;
     margin: 0 auto;
@@ -54,9 +53,7 @@ export const Content = styled.div `
     }
     
     > button:first-child(Link){
-        align-self: start;
-        background-color: red;
-        
+        align-self: start;      
     }
 
     > p {
@@ -86,14 +83,18 @@ export const Profile = styled.div `
         align-items: flex-end;
     }
 
-    span {
-        font-size: 14px;
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
-
     strong {
+        display: flex;
+        align-items: center;
         font-size: 16px;
         font-weight: normal;
         color: ${({ theme }) => theme.COLORS.WHITE};
+
+        margin-right: 10px;
+
+        svg {
+            color: ${({ theme }) => theme.COLORS.ORANGE};
+            margin-right: 8px;
+        }
     }
 `
