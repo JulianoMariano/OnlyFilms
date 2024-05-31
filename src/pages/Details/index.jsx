@@ -1,3 +1,4 @@
+import { FaStar }from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { Tag } from '../../components/Tag'
 import { Button } from'../../components/Button'
@@ -20,7 +21,9 @@ export function Details() {
             </Link>
             <h1>
               Interestellar
-              <FiStar/><FiStar/><FiStar/><FiStar/><FiStar/>
+              <span>
+                <FaStar/><FaStar/><FaStar/><FaStar/><FiStar/>
+              </span>
             </h1> 
           <span>
             <Profile>
@@ -29,7 +32,8 @@ export function Details() {
                 alt='Foto do usuário'
               />
               <div>
-                <strong>Juliano Mariano</strong>
+                <strong>Por Juliano Mariano</strong>
+                <strong> <FiClock/> 23/05/24 às 12:00</strong>
               </div>
             </Profile>
 

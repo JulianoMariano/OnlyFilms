@@ -36,9 +36,20 @@ export const Content = styled.div `
         }
 
         h1 {
+            display: flex;
+            align-items: center;
             font-size: 36px;
             font-weight: 500;
             margin-top: 10px;
+
+            span {
+                display: flex;
+                color: ${({ theme }) => theme.COLORS.ORANGE};
+                
+                margin-left: 20px;
+                font-size: 25px;
+                gap: 10px;
+            }
         }
     }
     
@@ -57,18 +68,20 @@ export const Content = styled.div `
 `
 export const Profile = styled.div `
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 24px 0 40px;
 
     >img {
-        width: 60px;
-        height: 60px;
+        width: 16px;
+        height: 160x;
         border-radius: 50%;
     }
 
     >div {
         display: flex;
-        flex-direction: column;
-        margin-right: 16px;
+        margin-left: 16px;
         line-height: 24px;
         align-items: flex-end;
     }
@@ -79,9 +92,8 @@ export const Profile = styled.div `
     }
 
     strong {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: normal;
         color: ${({ theme }) => theme.COLORS.WHITE};
     }
 `
-
-

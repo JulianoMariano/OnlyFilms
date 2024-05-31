@@ -21,6 +21,7 @@ export function Home() {
             <Note data={ 
               {
                 title: 'Interestellar',
+                subTitle: 'star',
                 tags: [
                   {id: '1', name: 'Ficção Cientifica'},
                   {id: '2', name: 'Drama'},

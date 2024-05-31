@@ -54,7 +54,10 @@ export const Search = styled.div `
 `
 export const Brand = styled(Link) `
     >h1 {
-        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 30px;
         color: ${({ theme }) => theme.COLORS.ORANGE};
     }
 ` 

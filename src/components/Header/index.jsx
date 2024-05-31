@@ -1,4 +1,5 @@
 import { Container, Brand, Search, Profile, Logout } from './styles'
+import { MdOutlineMovieFilter } from 'react-icons/md';
 import { RiShutDownLine } from 'react-icons/ri'
 import { Input } from '../../components/Input'
 import { FiSearch } from 'react-icons/fi';
@@ -8,7 +9,7 @@ export function Header() {
     return(
         <Container>
             <Brand to="/">
-                <h1>MovieMemento</h1>
+                <h1>OnlyFilms<MdOutlineMovieFilter/></h1>
             </Brand>
             
             <Search>
