@@ -15,14 +15,48 @@ export const Container = styled.div `
     overflow-y: auto;
   }
 
-  .inputs, .tags, .buttons {
+  >main::-webkit-scrollbar {
+    width: 12px;
+  }
+      
+  >main::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.COLORS.BACKGROUND900};
+  } 
+
+  >main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.ORANGE};  
+    border-radius: 20px;
+    border: 3px;
+  }
+
+  .tags, .buttons {
     display: flex;
-    gap: 10px;
+    gap: 24px;
+  }
+
+  .inputs {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .tags {
+    display: flex;
+    align-items: center;
+    background: black;
+
+    border-radius: 8px;
+    height: 88px;
+    padding: 16px;
+  }
+
+  .buttons .buttonDelete{
+    background-color: black;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
   }
 `
 
 export const Form = styled.form `
-  max-width: 50vw;
+  max-width: 90vw;
   margin: 38px auto;
 
   header {
@@ -51,4 +85,3 @@ export const Form = styled.form `
     "content content"   
   }
 `
-

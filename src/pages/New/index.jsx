@@ -30,24 +30,25 @@ export function New() {
           </div>
 
           <Textarea placeholder="Observações"/>
-
-          <Section title ="Links úteis">
-            <NoteItem value="https://rocketseat.com.br"/>
-            <NoteItem isNew placeholder="Novo Link"/>
-          </Section>
-          
+            
           <Section title ="Marcadores">
             <span>
-            <div className="tags">
-              <NoteItem value="react"/>
-              <NoteItem isNew placeholder="Nova tag"/>
-            </div>
+              <div className="tags">
+                <NoteItem value="react"/>
+                <NoteItem isNew placeholder="Novo marcador"/>
+              </div>
             </span>
           </Section>
           
           <div className="buttons">
-            <Button title="Excluir filme" />
-            <Button title="Salvar alterações" />
+            <Button 
+              className = "buttonDelete" 
+              title="Excluir filme" 
+            />
+            <Button 
+              className = "buttonSave"  
+              title="Salvar alterações" 
+            />
           </div>
 
         </Form>
