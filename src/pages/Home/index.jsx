@@ -12,35 +12,81 @@ export function Home() {
       </Header>
 
       <Content>
+        <header>
           <NewNote Link to="/new">
             <FiPlus />
-            Criar nota
+            Adicionar filme
           </NewNote>
-        <Section title = "Meus Filmes">
-          <Details link to="/details/:id">
-            <Note data={ 
-              {
-                title: 'Interestellar',
-                subTitle: 'star',
-                tags: [
-                  {id: '1', name: 'Ficção Cientifica'},
-                  {id: '2', name: 'Drama'},
-                  {id: '3', name: 'Familia'}
-                ]
-              }}
-            />
-          </Details>
-          <Note data={
-            {
-              title: 'Exemplo de Middleware', 
-              tags: [
-                {id: '1', name: 'express'},
-                {id: '2', name: 'nodejs'}
-              ]
-            }}
-          />
-        </Section>
-      
+          <h1>Meus Filmes</h1>
+        </header>
+        
+        <main id='Meus Filmes'>
+            <Details link to="/details/:id">
+              <Note data={ 
+                {
+                  title: 'Interestellar',
+                  subTitle: 'star',
+                  tags: [
+                    {id: '1', name: 'Ficção Cientifica'},
+                    {id: '2', name: 'Drama'},
+                    {id: '3', name: 'Familia'}
+                  ]
+                }}
+              />
+            </Details>
+            <Details link to="/details/:id">
+              <Note data={ 
+                {
+                  title: 'Interestellar',
+                  subTitle: 'star',
+                  tags: [
+                    {id: '1', name: 'Ficção Cientifica'},
+                    {id: '2', name: 'Drama'},
+                    {id: '3', name: 'Familia'}
+                  ]
+                }}
+              />
+            </Details>
+            <Details link to="/details/:id">
+              <Note data={ 
+                {
+                  title: 'Interestellar',
+                  subTitle: 'star',
+                  tags: [
+                    {id: '1', name: 'Ficção Cientifica'},
+                    {id: '2', name: 'Drama'},
+                    {id: '3', name: 'Familia'}
+                  ]
+                }}
+              />
+            </Details>
+            <Details link to="/details/:id">
+              <Note data={ 
+                {
+                  title: 'Interestellar',
+                  subTitle: 'star',
+                  tags: [
+                    {id: '1', name: 'Ficção Cientifica'},
+                    {id: '2', name: 'Drama'},
+                    {id: '3', name: 'Familia'}
+                  ]
+                }}
+              />
+            </Details>
+            <Details link to="/details/:id">
+              <Note data={ 
+                {
+                  title: 'Interestellar',
+                  subTitle: 'star',
+                  tags: [
+                    {id: '1', name: 'Ficção Cientifica'},
+                    {id: '2', name: 'Drama'},
+                    {id: '3', name: 'Familia'}
+                  ]
+                }}
+              />
+            </Details>
+        </main>
       </Content>
 
     </Container>

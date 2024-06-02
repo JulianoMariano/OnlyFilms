@@ -16,7 +16,7 @@ export const Container = styled.div `
   }
 
   >main::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
   }
       
   >main::-webkit-scrollbar-track {
