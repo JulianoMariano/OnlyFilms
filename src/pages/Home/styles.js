@@ -86,4 +86,5 @@ export const Content = styled.div `
     }
 ` 
 export const Details = styled(Link)`
+
 `
