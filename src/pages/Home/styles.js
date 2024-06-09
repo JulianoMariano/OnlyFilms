@@ -10,8 +10,8 @@ export const Container = styled.div `
     grid-template-areas: 
     "header"
     "content";
-    
-    >main {
+
+    > main {
         grid-area: content;
         overflow-y: auto;
     }
@@ -19,16 +19,17 @@ export const Container = styled.div `
     >main::-webkit-scrollbar {
         width: 10px;
     }
-              
+      
     >main::-webkit-scrollbar-track {
         background: ${({ theme }) => theme.COLORS.BACKGROUND900};
     } 
-        
+
     >main::-webkit-scrollbar-thumb {
         background-color: ${({ theme }) => theme.COLORS.ORANGE};  
         border-radius: 20px;
         border: 3px;
     }
+
     
 `
 export const Brand = styled.div `
@@ -82,6 +83,10 @@ export const Content = styled.div `
 
         h1{
             font-weight: normal;
+        }
+        
+        .filmes {
+            text-overflow: ellipsis;
         }
     }
 ` 
