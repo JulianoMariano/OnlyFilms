@@ -9,7 +9,7 @@ export const Container = styled.button `
   border: none;
   border-radius: 10px;
 
-  padding: 22px;
+  padding: 22px 40px;
   margin-bottom: 16px;
 
   >h1{
@@ -31,8 +31,9 @@ export const Container = styled.button `
     overflow: hidden;
     position: relative;
     line-height: 1.2em;
-    max-height: 6em; /* aqui vc controla a altura da caixa de texto */
+    max-height: 5em; /* aqui vc controla a altura da caixa de texto */
     text-align: justify;
+    padding-right: 14px;
   }
   
   >p::before{
@@ -40,7 +41,7 @@ export const Container = styled.button `
     position: absolute;
     right: 0px;
     bottom: 0;
-    padding: 0 0px 0 0.25em;
+    padding: 0 1px 2px 0.25em;
   }
 
   >footer {
