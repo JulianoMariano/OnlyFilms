@@ -13,9 +13,16 @@ export const Container = styled.div `
 
     padding: 0 124px;
 
+    a {
+      display: flex;
+      align-items: center;
+      color: ${({ theme }) => theme.COLORS.ORANGE};
+      gap: 10px;
+    }
+
     svg {
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
-      font-size: 24px;
+      color: ${({ theme }) => theme.COLORS.ORANGE};
+      font-size: 18px;
     }
   }
 `
