@@ -11,7 +11,7 @@ export function SignUp() {
       <Background />
 
       <Form>
-        <h1>NodeMovies</h1>
+        <h1>OnlyFilms</h1>
         <p>Aplicação perfeita para salvar seus filmes favoritos</p>
         <h2>Crie sua conta</h2>
 

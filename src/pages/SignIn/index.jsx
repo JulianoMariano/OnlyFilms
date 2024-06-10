@@ -8,7 +8,7 @@ export function SignIn() {
   return(
     <Container>
       <Form>
-        <h1>MovieMemento</h1>
+        <h1>OnlyFilms</h1>
         <p>Aplicação perfeita para salvar seus filmes favoritos</p>
         <h2>Faça seu login</h2>
 
