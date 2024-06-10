@@ -38,5 +38,4 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 
 ## 🌐 Contato
 
-LinkedIn: Juliano Mariano
- -  https://julianomariano.github.io/my-profile/
+ -  [Juliano Mariano](https://julianomariano.github.io/my-profile/)
