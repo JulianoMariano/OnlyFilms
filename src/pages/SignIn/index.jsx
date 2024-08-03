@@ -3,8 +3,12 @@ import { Button } from '../../components/Button'
 import { FiMail, FiLock } from 'react-icons/fi'
 import { Input } from '../../components/Input'
 import { Link } from 'react-router-dom' 
+import { useAuth } from '../../hooks/auth'
 
 export function SignIn() {
+  const data = useAuth()
+  console.log("MEU CONTEXTO =>", data)
+  
   return(
     <Container>
       <Form>
