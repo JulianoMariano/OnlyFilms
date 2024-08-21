@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState, useEffect } from "react"
 
 import { api } from "../services/api"
 
@@ -13,6 +13,9 @@ function AuthProvider({ children }) {
       const response = await api.post("/sessions", { email, password })
       const { user, token } = response.data
 
+      localStorage.setItem("@onlyfilms:user", JSON.stringify(user))
+      localStorage.setItem("@onlyfilms:token", token)
+
       api.defaults.headers.authorization = `Bearer ${token}`
       setData({ user, token })
 
@@ -26,8 +29,34 @@ function AuthProvider({ children }) {
     }
   }
 
+  function signOut() {
+    const token = localStorage.removeItem("@onlyfilms:token")
+    const user = localStorage.removeItem("@onlyfilms:user")
+
+    setData({ })
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem("@onlyfilms:token")
+    const user = localStorage.getItem("@onlyfilms:user")
+
+    if(token && user) {
+      api.defaults.headers.authorization = `Bearer ${token}`
+
+      setData({
+        token,
+        user: JSON.parse(user)
+      })
+    }
+  }, [])
+
+
   return(
-    <AuthContext.Provider value={{ signIn, user: data.user }}>
+    <AuthContext.Provider value={{ 
+      signIn, 
+      user: data.user,
+      signOut
+    }}>
       { children }
     </AuthContext.Provider>
   )

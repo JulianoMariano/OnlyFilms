@@ -15,6 +15,11 @@ export const Container = styled.header `
     justify-content: space-around;
     align-items: center;
 `
+export const Main = styled(Link) `
+    display: flex;
+    align-items: center;
+    gap: 5px;
+`
 export const Profile = styled(Link) `
     display: flex;
     flex-direction: row-reverse;
@@ -44,6 +49,10 @@ export const Profile = styled(Link) `
     }
 `
 export const Logout = styled.button `
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
     border: none;
     background: none;
     color: ${({ theme }) => theme.COLORS.GRAY_100};

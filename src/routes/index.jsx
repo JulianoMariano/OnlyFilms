@@ -11,3 +11,4 @@ export function Routes() {
     </BrowserRouter>
   )
 }
+

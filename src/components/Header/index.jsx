@@ -1,11 +1,12 @@
-import { Container, Brand, Search, Profile, Logout } from './styles'
+import { Container, Brand, Search, Main, Profile, Logout } from './styles'
 import { MdOutlineMovieFilter } from 'react-icons/md';
-import { RiShutDownLine } from 'react-icons/ri'
+import { useAuth } from "../../hooks/auth.jsx"
 import { Input } from '../../components/Input'
 import { FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom'
 
 export function Header() {
+    const { signOut } = useAuth()
     return(
         <Container>
             <Brand to="/">
@@ -15,20 +16,20 @@ export function Header() {
             <Search>
                 <Input placeholder="Pesquisar pelo titulo" icon={FiSearch} />
             </Search>
-            
-            <Profile to="/profile">
-                <img
-                    src='https://github.com/JulianoMariano.png'
-                    alt='Foto do usuário'
-                />
-                <div>
+            <Main>
+                <Profile to="/profile">
+                    <img
+                        src='https://github.com/JulianoMariano.png'
+                        alt='Foto do usuário'
+                        />
+                </Profile>
+                <Logout>
                     <strong>Juliano Mariano</strong>
-                    <Logout>
+                    <Logout onClick={signOut}>
                         Sair
                     </Logout>
-                </div>
-            </Profile>
-            
+                </Logout>
+            </Main>
         </Container>
     );
 }
