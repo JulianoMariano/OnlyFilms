@@ -16,8 +16,7 @@ function AuthProvider({ children }) {
       localStorage.setItem("@onlyfilms:user", JSON.stringify(user))
       localStorage.setItem("@onlyfilms:token", token)
 
-      api.defaults.headers.authorization = `Bearer ${token}`
-      setData({ user, token })
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
     } catch(error) {
       if(error.response) {
@@ -41,7 +40,7 @@ function AuthProvider({ children }) {
     const user = localStorage.getItem("@onlyfilms:user")
 
     if(token && user) {
-      api.defaults.headers.authorization = `Bearer ${token}`
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
       setData({
         token,
