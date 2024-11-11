@@ -8,8 +8,17 @@ import { Input } from '../../components/Input'
 import { FiArrowLeft } from 'react-icons/fi'
 import { Container, Form } from './styles'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export function New() {
+  const [links, setLinks] = useState([])
+
+  function handleAddLink(){
+    setLinks(prevState => [...prevState, newLink])
+    setNewLink(" ")
+  }
+
+
   return(
     <Container>
       <Header />

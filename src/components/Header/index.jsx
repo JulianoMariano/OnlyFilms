@@ -3,10 +3,14 @@ import { MdOutlineMovieFilter } from 'react-icons/md';
 import { useAuth } from "../../hooks/auth.jsx"
 import { Input } from '../../components/Input'
 import { FiSearch } from 'react-icons/fi';
+import { api } from '../../services/api'
 import { Link } from 'react-router-dom'
 
 export function Header() {
-    const { signOut } = useAuth()
+    const { signOut, user } = useAuth()
+
+    const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPLaceHolder
+
     return(
         <Container>
             <Brand to="/">
@@ -19,12 +23,12 @@ export function Header() {
             <Main>
                 <Profile to="/profile">
                     <img
-                        src='https://github.com/JulianoMariano.png'
-                        alt='Foto do usuário'
+                        src={avatarURL}
+                        alt={user.name}
                         />
                 </Profile>
                 <Logout>
-                    <strong>Juliano Mariano</strong>
+                    <strong>{user.name}</strong>
                     <Logout onClick={signOut}>
                         Sair
                     </Logout>

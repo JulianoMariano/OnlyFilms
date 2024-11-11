@@ -15,7 +15,13 @@ export function SignIn() {
   function handleSignIn() {
     signIn({ email, password })
   }
-  
+      
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      handleSignIn() // Executa a função de login ao pressionar Enter
+    }
+  }
+ 
   return(
     <Container>
       <Form>
@@ -26,17 +32,25 @@ export function SignIn() {
         <Input 
           placeholder="E-mail"
           type="text"
+          autoComplete="current-e-mail"
           icon={FiMail}
           onChange = {e => setEmail(e.target.value)}
+          onKeyDown={handleKeyPress}
           />
+          
         <Input 
           placeholder="Senha"
           type="password"
+          autoComplete="current-password"
           icon={FiLock}
           onChange = {e => setPassword(e.target.value)}
+          onKeyDown={handleKeyPress}
         />
 
-        <Button title="Entrar" onClick={handleSignIn} />
+        <Button title="Entrar" 
+          onClick={handleSignIn}
+          onKeyDown={handleKeyPress} 
+        />
 
         <Link to="/register">
           Criar conta
