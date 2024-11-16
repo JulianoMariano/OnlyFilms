@@ -19,6 +19,12 @@ export function New() {
     setNewLink("")
   }
 
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      handleAddLink() // Executa a função de login ao pressionar Enter
+    }
+  }
+
   return(
     <Container>
       <Header />
@@ -48,7 +54,8 @@ export function New() {
                     <NoteItem
                       key={String(index)}
                       value={link}
-                      onClick={ () => {} } 
+                      onClick={ () => {} }
+
                     
                     />
                   })
@@ -59,6 +66,7 @@ export function New() {
                   value={newLink}
                   onChange={e => setNewLink(e.target.value)}
                   onClick={handleAddLink}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
           </Section>
