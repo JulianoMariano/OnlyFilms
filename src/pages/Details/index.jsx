@@ -1,6 +1,8 @@
 import { FaStar }from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { api } from '../../services/api'
 import { Tag } from '../../components/Tag'
+import { useAuth } from "../../hooks/auth.jsx"
 import { Button } from'../../components/Button'
 import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
@@ -9,6 +11,9 @@ import { ButtonText } from '../../components/ButtonText'
 import { FiArrowLeft, FiStar, FiClock } from 'react-icons/fi'
 
 export function Details() {
+  const { user } = useAuth()
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPLaceHolder
+
   return(
     <Container>
       <Header/>
@@ -28,11 +33,11 @@ export function Details() {
           <span>
             <Profile>
               <img
-                src='https://github.com/JulianoMariano.png'
-                alt='Foto do usuário'
+                src={avatarURL}
+                alt={user.name}
               />
               <div>
-                <strong>Por Juliano Mariano</strong>
+                <strong>Por {user.name}</strong>
                 <strong> <FiClock/> 23/05/24 às 12:00</strong>
               </div>
             </Profile>

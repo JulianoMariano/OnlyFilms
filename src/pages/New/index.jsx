@@ -25,6 +25,10 @@ export function New() {
     }
   }
 
+  function handleRemoveLink(deleted){
+    setLinks(prevState => prevState.filter(link => link !== deleted))
+  }
+
   return(
     <Container>
       <Header />
@@ -48,26 +52,25 @@ export function New() {
             
           <Section title ="Marcadores">
 
-              <div className="tags">
-                {
-                  links.map((link, index) => {
-                    <NoteItem
-                      key={String(index)}
-                      value={link}
-                      onClick={ () => {} }
-
-                    
-                    />
-                  })
-                }
-                <NoteItem 
-                  isNew 
+            <div className="tags">
+              {
+                links.map((link, index) => (
+                  <NoteItem
+                    key={String(index)}
+                    value={link}
+                    onClick={ () => handleRemoveLink(link) }                    
+                  />
+                  )
+                )
+              }
+              <NoteItem 
+                isNew 
                   placeholder="Novo marcador"
                   value={newLink}
                   onChange={e => setNewLink(e.target.value)}
                   onClick={handleAddLink}
                   onKeyDown={handleKeyPress}
-                />
+              />
               </div>
           </Section>
           
