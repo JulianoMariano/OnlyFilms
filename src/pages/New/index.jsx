@@ -12,12 +12,12 @@ import { useState } from 'react'
 
 export function New() {
   const [links, setLinks] = useState([])
+  const [newLink, setNewLink] = useState("")
 
   function handleAddLink(){
     setLinks(prevState => [...prevState, newLink])
-    setNewLink(" ")
+    setNewLink("")
   }
-
 
   return(
     <Container>
@@ -41,12 +41,26 @@ export function New() {
           <Textarea placeholder="Observações"/>
             
           <Section title ="Marcadores">
-            <span>
+
               <div className="tags">
-                <NoteItem value="react"/>
-                <NoteItem isNew placeholder="Novo marcador"/>
+                {
+                  links.map((link, index) => {
+                    <NoteItem
+                      key={String(index)}
+                      value={link}
+                      onClick={ () => {} } 
+                    
+                    />
+                  })
+                }
+                <NoteItem 
+                  isNew 
+                  placeholder="Novo marcador"
+                  value={newLink}
+                  onChange={e => setNewLink(e.target.value)}
+                  onClick={handleAddLink}
+                />
               </div>
-            </span>
           </Section>
           
           <div className="buttons">

@@ -57,13 +57,13 @@ export const Container = styled.div `
 
 export const Form = styled.form `
   max-width: 90vw;
-  margin: 38px auto;
+  margin: 30px auto;
 
   header {
    display: flex;
    flex-direction: column;
    gap: 20px;
-   margin-bottom:30px;
+   margin-bottom:20px;
 
     a, button {
       display: flex;
