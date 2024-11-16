@@ -11,22 +11,23 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export function New() {
-  const [links, setLinks] = useState([])
-  const [newLink, setNewLink] = useState("")
 
-  function handleAddLink(){
-    setLinks(prevState => [...prevState, newLink])
-    setNewLink("")
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState("")
+
+  function handleAddTag() {
+    setTags(prevState => [...prevState, newTag])
+    setNewTag("")
   }
 
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
-      handleAddLink() // Executa a função de login ao pressionar Enter
+      handleAddTag() // Executa a função de login ao pressionar Enter
     }
   }
 
-  function handleRemoveLink(deleted){
-    setLinks(prevState => prevState.filter(link => link !== deleted))
+  function handleRemoveTag(deleted){
+    setTags(prevState => prevState.filter(tag => tag !== deleted))
   }
 
   return(
@@ -54,11 +55,11 @@ export function New() {
 
             <div className="tags">
               {
-                links.map((link, index) => (
+                tags.map((tag, index) => (
                   <NoteItem
                     key={String(index)}
-                    value={link}
-                    onClick={ () => handleRemoveLink(link) }                    
+                    value={tag}
+                    onClick={ () => handleRemoveTag(tag) }                    
                   />
                   )
                 )
@@ -66,9 +67,9 @@ export function New() {
               <NoteItem 
                 isNew 
                   placeholder="Novo marcador"
-                  value={newLink}
-                  onChange={e => setNewLink(e.target.value)}
-                  onClick={handleAddLink}
+                  value={newTag}
+                  onChange={e => setNewTag(e.target.value)}
+                  onClick={handleAddTag}
                   onKeyDown={handleKeyPress}
               />
               </div>

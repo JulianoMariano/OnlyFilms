@@ -11,6 +11,7 @@ export const Container = styled.div`
 
   border-radius: 10px;
   padding-right: 16px;
+  width: 15rem;
 
   >button {
     border: none;
