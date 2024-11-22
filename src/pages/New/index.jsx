@@ -5,15 +5,22 @@ import { Section } from '../../components/Section'
 import { Header }  from '../../components/Header'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
+import { useNavigate} from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import { Container, Form } from './styles'
+import { api } from "../../services/api"
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export function New() {
+  const [title, setTitle] = useState("")
+  const [rating, setRating] = useState("")
+  const [description, setDescription] = useState("")
 
   const [tags, setTags] = useState([])
   const [newTag, setNewTag] = useState("")
+
+  const navigate = useNavigate()
 
   function handleAddTag() {
     setTags(prevState => [...prevState, newTag])
@@ -30,6 +37,17 @@ export function New() {
     setTags(prevState => prevState.filter(tag => tag !== deleted))
   }
 
+ async function handleNewNote(){
+  await api.post("/notes",{
+    title,
+    rating,
+    description,
+    tags
+  })
+  alert("Nota cadastrada com sucesso!!")
+  navigate("/")
+ }
+
   return(
     <Container>
       <Header />
@@ -45,13 +63,26 @@ export function New() {
           </header>
           
           <div className="inputs">
-            <Input placeholder="Título" />
-            <Input placeholder="Sua nota (de 0 a 5)" />
+            <Input 
+              placeholder="Título do filme"
+              onChange={e => setTitle(e.target.value)}
+            />
+            <Input
+              type="number" 
+              placeholder="Sua nota (de 0 a 5)"
+              min="0"
+              max="5"
+              value={rating}
+              onChange={e => setRating(e.target.value)}
+            />
           </div>
 
-          <Textarea placeholder="Observações"/>
+          <Textarea 
+            placeholder="Descrição detalhada do filme"
+            onChange={e => setDescription(e.target.value)}
+          />
             
-          <Section title ="Marcadores">
+          <Section title ="Gêneros do Filme">
 
             <div className="tags">
               {
@@ -66,7 +97,7 @@ export function New() {
               }
               <NoteItem 
                 isNew 
-                  placeholder="Novo marcador"
+                  placeholder="Novo gênero"
                   value={newTag}
                   onChange={e => setNewTag(e.target.value)}
                   onClick={handleAddTag}
@@ -82,7 +113,8 @@ export function New() {
             />
             <Button 
               className = "buttonSave"  
-              title="Salvar alterações" 
+              title="Salvar Filme" 
+              onClick={handleNewNote}
             />
           </div>
 
