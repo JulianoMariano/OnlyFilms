@@ -38,6 +38,19 @@ export function New() {
   }
 
  async function handleNewNote(){
+  const validations = [
+    {condition: !title, message: "Por favor, preencha o Título do filme."},
+    {condition: !rating, message: "Por favor, preencha sua avaliação do filme."},
+    {condition: !description, message: "Por favor, preencha a descrição do filme."},
+    {condition: newTag, message: "Verifique a seção Gêneros para prosseguir com a ação."}
+  ]
+
+  for (const validation of validations) {
+    if (validation.condition) {
+      return alert(validation.message)
+    }
+  }
+
   await api.post("/notes",{
     title,
     rating,
