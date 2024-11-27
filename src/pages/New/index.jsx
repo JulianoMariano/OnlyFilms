@@ -51,7 +51,7 @@ export function New() {
     }
   }
 
-  await api.post("/notes",{
+  await api.post("/notes", {
     title,
     rating,
     description,

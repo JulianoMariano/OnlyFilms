@@ -29,7 +29,6 @@ export const Container = styled.div `
         border-radius: 20px;
         border: 3px;
     }
-
     
 `
 export const Brand = styled.div `
@@ -44,6 +43,10 @@ export const Brand = styled.div `
     border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    >section{
+        display: flex;
+    }
 
     >h1 {
         font-size: 24px;

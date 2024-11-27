@@ -1,16 +1,14 @@
-import { Link } from 'react-router-dom'
 import { Note } from "../../components/Note";
 import { FiPlus, FiStar } from "react-icons/fi";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
-import { Container, Brand, Content, NewNote, Details } from "./styles";
+import { Container, Brand, Search, Content, NewNote, Details } from "./styles";
 import { FaStar } from 'react-icons/fa';
 
 export function Home() {
   return (
     <Container>
       <Header/>
-        
         <main>
           <Content>
             <header>

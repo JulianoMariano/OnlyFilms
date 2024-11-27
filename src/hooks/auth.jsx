@@ -1,7 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react"
-
 import { api } from "../services/api"
-
 export const AuthContext = createContext({})
 
 function AuthProvider({ children }) {
@@ -17,6 +15,7 @@ function AuthProvider({ children }) {
       localStorage.setItem("@onlyfilms:token", token)
 
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+      setData({user, token})
 
     } catch(error) {
       if(error.response) {
@@ -82,7 +81,7 @@ function AuthProvider({ children }) {
       signIn, 
       signOut,
       updateProfile,
-      user: data.user
+      user: data.user,
     }}>
       { children }
     </AuthContext.Provider>
