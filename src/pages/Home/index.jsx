@@ -1,8 +1,8 @@
-import { Note } from "../../components/Note";
-import { FiPlus, FiStar } from "react-icons/fi";
-import { Header } from "../../components/Header";
-import { Section } from "../../components/Section";
 import { Container, Brand, Search, Content, NewNote, Details } from "./styles";
+import { Section } from "../../components/Section";
+import { Header } from "../../components/Header";
+import { FiPlus, FiStar } from "react-icons/fi";
+import { Note } from "../../components/Note";
 import { FaStar } from 'react-icons/fa';
 
 export function Home() {
