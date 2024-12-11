@@ -57,6 +57,7 @@ export function New() {
     description,
     tags
   })
+  
   alert("Nota cadastrada com sucesso!!")
   navigate("/")
  }
